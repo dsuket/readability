@@ -4,11 +4,11 @@ var helpers = require('./helpers');
 var encodinglib = require("encoding");
 var urllib = require('url');
 
-exports.debug = function(debug) {
+var debug = function(debug) {
   helpers.debug(debug);
 };
 
-exports.debug(false);
+debug(false);
 
 function Readability(window, options) {
   this._window = window;
@@ -285,6 +285,7 @@ function read(html, options, callback) {
 }
 
 module.exports = read;
+module.exports.debug = debug;
 module.exports.read = function() {
   console.warn('`readability.read` is deprecated. Just use `var read = require("node-readability"); read(url...);`.');
   return read.apply(this, arguments);
