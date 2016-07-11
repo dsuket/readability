@@ -461,19 +461,33 @@ function cleanConditionally(e, tag) {
       var contentLength = getInnerText(tagsList[i]).length;
       var toRemove = false;
 
+      var averageParagraphLength = 120;
+      var estimatePlength = Math.floor(contentLength/averageParagraphLength);
+      dbg('  p: %s, img: %s, li: %s, input: %s, embedCount: %s, linkDensity: %s, contentLength: %s, estimatePlength: %s',
+          p, img, li, input, embedCount, linkDensity, contentLength, estimatePlength);
+      if (estimatePlength > p) {
+        p = estimatePlength;
+      }
       if (img > p && img > 1) {
+        dbg('  remove img');
         toRemove = true;
       } else if (li > p && tag != "ul" && tag != "ol") {
+        dbg('  remove list');
         toRemove = true;
       } else if (input > Math.floor(p / 3)) {
+        dbg('  remove input');
         toRemove = true;
       } else if (contentLength < 25 && (img == 0 || img > 2)) {
+        dbg('  remove short content');
         toRemove = true;
       } else if (weight < 25 && linkDensity > .2) {
+        dbg('  remove middle linkDensity with low weight');
         toRemove = true;
       } else if (weight >= 25 && linkDensity > .5) {
+        dbg('  remove hight linkDensity with middle weight');
         toRemove = true;
       } else if ((embedCount == 1 && contentLength < 75) || embedCount > 1) {
+        dbg('  remove embed');
         toRemove = true;
       }
 
