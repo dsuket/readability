@@ -2,7 +2,7 @@ var url = require("url");
 
 // All of the regular expressions in use within readability.
 var regexps = {
-  unlikelyCandidatesRe: /combx|modal|lightbox|comment|disqus|foot|header|menu|meta|nav|rss|shoutbox|sidebar|sponsor|social|teaserlist|time|tweet|twitter/i,
+  unlikelyCandidatesRe: /combx|modal|lightbox|comment|disqus|foot|header|menu|meta|nav|rss|shoutbox|sidebar|sponsor|social|teaserlist|time|tweet|twitter|read.*more/i,
   okMaybeItsACandidateRe: /and|article|body|column|main/i,
   positiveRe: /article|body|content|entry|hentry|page|pagination|post|section|chapter|description|main|blog|text|kiji/i,
   negativeRe: /combx|comment|contact|foot|footer|footnote|link|media|meta|promo|related|scroll|shoutbox|sponsor|utility|tags|widget|sub.*content/i,
@@ -95,7 +95,7 @@ var grabArticle = module.exports.grabArticle = function(document, preserveUnlike
       var unlikelyMatchString = node.className + node.id;
       if (unlikelyMatchString.search(regexps.unlikelyCandidatesRe) !== -1 && unlikelyMatchString.search(regexps.okMaybeItsACandidateRe) == -1 && node.tagName !== 'HTML' && node.tagName !== "BODY") {
         var pnodes = node.getElementsByTagName('p');
-        if (pnodes.length < pCountMaybeCandidate) {
+        if (pnodes.length < pCountMaybeCandidate || unlikelyMatchString.search(/comment/) !== -1) {
           dbg("Removing unlikely candidate - " + unlikelyMatchString);
           node.parentNode.removeChild(node);
           continueFlag = true;
@@ -190,7 +190,7 @@ var grabArticle = module.exports.grabArticle = function(document, preserveUnlike
 
     if (!topCandidate || candidate.readability.contentScore > topCandidate.readability.contentScore) topCandidate = candidate;
   });
-  dbg('topCandidate', topCandidate.outerHTML.substring(0,40));
+  dbg('*** topCandidate: %s#%s.%s', topCandidate.tagName, topCandidate.id, topCandidate.className);
 
   /**
    * If we still have no top candidate, just use the body as a last resort.
@@ -343,10 +343,16 @@ function getLinkDensity(e) {
   var textLength = getInnerText(e).length;
   var linkLength = 0;
   for (var i = 0, il = links.length; i < il; i++) {
-    var href = links[i].getAttribute('href');
+    var linkEl = links[i];
+    var href = linkEl.getAttribute('href');
     // hack for <h2><a href="#menu"></a></h2> / <h2><a></a></h2>
     if (!href || (href.length > 0 && href[0] === '#')) continue;
-    linkLength += getInnerText(links[i]).length;
+    var len = getInnerText(linkEl).length;
+    if (linkEl.parentNode.tagName.toLowerCase() !== 'li') {
+      linkLength += len;
+    } else {
+      textLength -= len;
+    }
   }
   return linkLength / textLength;
 }
@@ -435,33 +441,34 @@ function cleanConditionally(e, tag) {
    * TODO: Consider taking into account original contentScore here.
    **/
   for (var i = curTagsLength - 1; i >= 0; i--) {
-    var weight = getClassWeight(tagsList[i]);
+    var node = tagsList[i];
+    var weight = getClassWeight(node);
 
-    dbg("Cleaning Conditionally " + tagsList[i] + " (" + tagsList[i].className + ":" + tagsList[i].id + ")" + ((typeof tagsList[i].readability != 'undefined') ? (" with score " + tagsList[i].readability.contentScore) : ''));
+    dbg("Cleaning Conditionally " + node + " (" + node.className + ":" + node.id + ")" + ((typeof node.readability != 'undefined') ? (" with score " + node.readability.contentScore) : ''));
 
     if (weight < 0) {
-      tagsList[i].parentNode.removeChild(tagsList[i]);
-    } else if (getCharCount(tagsList[i], ',') < 10) {
+      node.parentNode.removeChild(node);
+    } else if (getCharCount(node, ',') < 10) {
       /**
        * If there are not very many commas, and the number of
        * non-paragraph elements is more than paragraphs or other ominous signs, remove the element.
        **/
 
-      var p = tagsList[i].getElementsByTagName("p").length;
-      var img = tagsList[i].getElementsByTagName("img").length;
-      var li = tagsList[i].getElementsByTagName("li").length - 100;
-      var input = tagsList[i].getElementsByTagName("input").length;
+      var p = node.getElementsByTagName("p").length;
+      var img = node.getElementsByTagName("img").length;
+      var li = node.getElementsByTagName("li").length - 100;
+      var input = node.getElementsByTagName("input").length;
 
       var embedCount = 0;
-      var embeds = tagsList[i].getElementsByTagName("embed");
+      var embeds = node.getElementsByTagName("embed");
       for (var ei = 0, il = embeds.length; ei < il; ei++) {
         if (embeds[ei].src && embeds[ei].src.search(regexps.videoRe) == -1) {
           embedCount++;
         }
       }
 
-      var linkDensity = getLinkDensity(tagsList[i]);
-      var contentLength = getInnerText(tagsList[i]).length;
+      var linkDensity = getLinkDensity(node);
+      var contentLength = getInnerText(node).length;
       var toRemove = false;
 
       var averageParagraphLength = 120;
@@ -471,6 +478,13 @@ function cleanConditionally(e, tag) {
       if (estimatePlength > p) {
         p = estimatePlength;
       }
+
+      var tagName = node.tagName.toLowerCase();
+      var isList = tagName === "ul" || tag === "ol";
+      isCode = tagName === "code" || tagName === "pre" ||
+        node.className.search(/code/) !== -1 ||
+        node.parentNode.className.search(/code/) !== -1;
+
       if (img > p && img > 1) {
         dbg('  remove img');
         toRemove = true;
@@ -480,14 +494,14 @@ function cleanConditionally(e, tag) {
       } else if (input > Math.floor(p / 3)) {
         dbg('  remove input');
         toRemove = true;
-      } else if (contentLength < 25 && (img == 0 || img > 2)) {
+      } else if (contentLength < 25 && (img == 0 || img > 2) && !isCode && !isList) {
         dbg('  remove short content');
         toRemove = true;
-      } else if (weight < 25 && linkDensity > .2) {
-        dbg('  remove middle linkDensity with low weight');
+      } else if (weight < 25 && linkDensity > .2 && !isList) {
+        dbg('  remove middle linkDensity with low weight: %s', node.outerHTML.substring(0, 40));
         toRemove = true;
-      } else if (weight >= 25 && linkDensity > .5) {
-        dbg('  remove hight linkDensity with middle weight');
+      } else if (weight >= 25 && linkDensity > .5 && !isList) {
+        dbg('  remove hight linkDensity with middle weight: %s', node.outerHTML.substring(0, 40));
         toRemove = true;
       } else if ((embedCount == 1 && contentLength < 75) || embedCount > 1) {
         dbg('  remove embed');
@@ -495,7 +509,7 @@ function cleanConditionally(e, tag) {
       }
 
       if (toRemove) {
-        tagsList[i].parentNode.removeChild(tagsList[i]);
+        node.parentNode.removeChild(node);
       }
     }
   }
