@@ -190,7 +190,6 @@ var grabArticle = module.exports.grabArticle = function(document, preserveUnlike
 
     if (!topCandidate || candidate.readability.contentScore > topCandidate.readability.contentScore) topCandidate = candidate;
   });
-  dbg('*** topCandidate: %s#%s.%s', topCandidate.tagName, topCandidate.id, topCandidate.className);
 
   /**
    * If we still have no top candidate, just use the body as a last resort.
@@ -207,7 +206,7 @@ var grabArticle = module.exports.grabArticle = function(document, preserveUnlike
     document.body.appendChild(topCandidate);
     initializeNode(topCandidate);
   }
-
+  dbg('*** topCandidate: %s#%s.%s', topCandidate.tagName, topCandidate.id, topCandidate.className);
 
   /**
    * Now that we have the top candidate, look through its siblings for content that might also be related.
@@ -348,10 +347,11 @@ function getLinkDensity(e) {
     // hack for <h2><a href="#menu"></a></h2> / <h2><a></a></h2>
     if (!href || (href.length > 0 && href[0] === '#')) continue;
     var len = getInnerText(linkEl).length;
-    if (linkEl.parentNode.tagName.toLowerCase() !== 'li') {
-      linkLength += len;
-    } else {
+    var parent = linkEl.parentNode;
+    if (parent && parent.tagName.toLowerCase() === 'li') {
       textLength -= len;
+    } else {
+      linkLength += len;
     }
   }
   return linkLength / textLength;
