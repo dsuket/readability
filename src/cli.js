@@ -17,6 +17,9 @@ if(argv.h){
   return;
 }
 
+// debug flag
+read.debug(process.env.DEBUG);
+
 var callback = function(err, article){
   if(err)
     console.error(err);
