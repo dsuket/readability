@@ -4,8 +4,8 @@ var url = require("url");
 var regexps = {
   unlikelyCandidatesRe: /combx|modal|lightbox|comment|disqus|foot|header|menu|meta|nav|rss|shoutbox|sidebar|sponsor|social|teaserlist|time|tweet|twitter/i,
   okMaybeItsACandidateRe: /and|article|body|column|main/i,
-  positiveRe: /article|body|content|entry|hentry|page|pagination|post|section|chapter|description|main|blog|text/i,
-  negativeRe: /combx|comment|contact|foot|footer|footnote|link|media|meta|promo|related|scroll|shoutbox|sponsor|utility|tags|widget/i,
+  positiveRe: /article|body|content|entry|hentry|page|pagination|post|section|chapter|description|main|blog|text|kiji/i,
+  negativeRe: /combx|comment|contact|foot|footer|footnote|link|media|meta|promo|related|scroll|shoutbox|sponsor|utility|tags|widget|sub.*content/i,
   divToPElementsRe: /<(a|blockquote|dl|div|img|ol|p|pre|table|ul)/i,
   replaceBrsRe: /(<br[^>]*>[ \n\r\t]*){2,}/gi,
   replaceFontsRe: /<(\/?)font[^>]*>/gi,
@@ -182,12 +182,15 @@ var grabArticle = module.exports.grabArticle = function(document, preserveUnlike
      * Scale the final candidates score based on link density. Good content should have a
      * relatively small link density (5% or less) and be mostly unaffected by this operation.
      **/
+    var contentScore = candidate.readability.contentScore;
+    var linkDensity = getLinkDensity(candidate);
     candidate.readability.contentScore = candidate.readability.contentScore * (1 - getLinkDensity(candidate));
 
-    dbg('Candidate: ' + candidate + " (" + candidate.className + ":" + candidate.id + ") with score " + candidate.readability.contentScore);
+    dbg('Candidate: ' + candidate + " (" + candidate.className + ":" + candidate.id + ") with score " + candidate.readability.contentScore + ', contentScore: %s, linkDensity: %s', contentScore, linkDensity);
 
     if (!topCandidate || candidate.readability.contentScore > topCandidate.readability.contentScore) topCandidate = candidate;
   });
+  dbg('topCandidate', topCandidate.outerHTML.substring(0,40));
 
   /**
    * If we still have no top candidate, just use the body as a last resort.
@@ -673,5 +676,8 @@ function initializeNode(node) {
     }
   }
 
-  node.readability.contentScore += getClassWeight(node);
+  var classWeight = getClassWeight(node);
+  dbg('%s[#%s.%s], contentScore: %s, classWeight: %s',
+    node.tagName, node.id, node.className, node.readability.contentScore, classWeight);
+  node.readability.contentScore += classWeight;
 }
