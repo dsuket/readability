@@ -65,7 +65,7 @@ var prepDocument = module.exports.prepDocument = function(document) {
       }
     }
   }
-  
+
   // Strip out all <script> tags, as they *should* be useless
   var scripts = document.getElementsByTagName('script');
   [].forEach.call(scripts, function (node) {
@@ -117,10 +117,13 @@ var grabArticle = module.exports.grabArticle = function(document, preserveUnlike
         Array.prototype.slice.call(node.childNodes).forEach(function(childNode) {
           if (childNode.nodeType == 3 /*TEXT_NODE*/ ) {
             // use span instead of p. Need more tests.
-            dbg("replacing text node with a span tag with the same content.");
-            var span = document.createElement('span');
-            span.innerHTML = childNode.nodeValue;
-            childNode.parentNode.replaceChild(span, childNode);
+            dbg("replacing text node with a p tag with the same content.");
+            var text = childNode.nodeValue.trim();
+            if (text) {
+              var p = document.createElement('p');
+              p.innerHTML = text;
+              childNode.parentNode.replaceChild(p, childNode);
+            }
           }
         });
       }

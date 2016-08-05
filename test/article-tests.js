@@ -186,17 +186,17 @@ describe('Regression Tests', function() {
     ],
   },
   {
-    skip: true,
     fixture: 'engadget_android-one',
     title: 'iPhoneとの両輪で主力に、Android Oneを発売するワイモバイルの狙いとは：週刊モバイル通信 石野純也',
     include: [
       'ワイモバイルが、日本初の「Android One」となるシャープ製スマホの「507SH」',
-      'ワイモバイルがAndroid Oneスマホを発売するワケ',
       'もともと、Android Oneは、グーグルが始めた新興国向けのプログラムでした。',
+      '▼iPhoneと両輪でワイモバイルの主力にしていく予定',
       '▼役割が拡大しつつあるAndroid One',
       'この試みがうまくいくかどうかは、今後も期待して見守りたいと思います。'
     ],
     notInclude: [
+      'ワイモバイルがAndroid Oneスマホを発売するワケ', // post-garally
       'オススメ: 自動運転で死亡のテスラオーナー',
       '郵便局で格安スマホ販売へ。',
       '元グーグル社員が立ち上げたFIVE',
