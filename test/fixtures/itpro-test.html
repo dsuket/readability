@@ -1,0 +1,1038 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja" xmlns:og="http://ogp.me/ns#" xmlns:mixi="http://mixi-platform.com/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="情報技術,IT,日経BP社,ITpro,IT Pro,ニュース,解説,コラム,情報システム,インターネット,セキュリティ,ネットワーク">
+<meta name="description" content="　デスクトップにショートカットアイコンやフォルダーを置いて作業している人は、アプリで作業しているときにデスクトップを参照したくなることだろう。最も簡単なのは［Windows］＋［D］のショートカットキーだ。このキーを押すと、デスクトップのウィンドウを全て最小化し、デスクトップを表示できる。もう一度同じショートカットを押すと、アプリのウィンドウは元に戻る。">
+<meta name="viewport" content="width=device-width">
+<meta name="ROBOTS" content="NOODP">
+<meta name="googlebot" content="NOODP">
+<meta name="ROBOTS" content="NOYDIR">
+<meta name="bpcmstoken" content="TjZrmP6xHERCrRgaTeptkJD2TJuqNev%2FJvCTOXHq9ZoBb%2BdSyndB2nQ2CJjsGuGiNUAHeTMR77rQ%0D%0Aw7Yc42rtK8hCoAL2LDyr9EVC5h2mXzw%3D">
+<meta name="TopTitle" content="Q＆Aで分かるWindows 10">
+<meta name="MainTitle" content="［Windows 10］ウィンドウを閉じずに一時的にデスクトップを見たい">
+<meta name="TopId" content="/atcl/column/15/112000265/">
+<meta name="ArticleDate" content="2016-07-05">
+
+<meta name="cXenseParse:recs:publishtime" content="2016-07-05T00:00:00+09:00">
+<!-- Cxense script begin -->
+<script type="text/javascript">
+function getCookie(c_name){
+    if(document.cookie.length > 0){
+        var st = document.cookie.indexOf(c_name + "=");
+        if(st != -1){
+            st = st + c_name.length+1;
+            var ed = document.cookie.indexOf(";",st);
+            if(ed == -1)ed = document.cookie.length;
+            return unescape(document.cookie.substring(st,ed));
+        }
+    }
+}
+var cX = cX || {}; cX.callQueue = cX.callQueue || [];
+//keys[0]:prefix,keys[1]:Local Storage Key,keys[2]:Cookie Name
+var keys = ["nbp","nikkeiid","NID-Serial-Cookie"];
+cX.callQueue.push(['invoke',function() {
+cX.setSiteId('9222369374803880879');
+var id = getCookie(keys[2]) ? getCookie(keys[2]) : "";
+if(id){
+    cX.addExternalId({'id':id,'type':keys[0]});
+    cX.sendPageViewEvent();
+}else{
+    cX.sendPageViewEvent();
+}
+}]);
+</script>
+<script type="text/javascript">
+(function(d,s,e,t){e=d.createElement(s);e.type='text/java'+s;e.async='async';
+e.src='http'+('https:'===location.protocol?'s://s':'://')+'cdn.cxense.com/cx.js';
+t=d.getElementsByTagName(s)[0];t.parentNode.insertBefore(e,t);})(document,'script');
+</script>
+<!-- Cxense script end -->
+<meta name="REVISE_DATE" content="">
+<meta name="AuthId" content="itpro">
+
+<meta name="hkeywords" content="_toku">
+<meta name="TTypeId" content="win">
+<meta name="ATypeId" content="win">
+<meta name="MediaId" content="ITP">
+
+<meta name="KijiGrade" content="high">
+
+<meta name="CCateId" content="COLUMN">
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="ITpro"/>
+<meta property="og:title" content="［Windows 10］ウィンドウを閉じずに一時的にデスクトップを見たい"/>
+<meta property="og:url" content="http://itpro.nikkeibp.co.jp/atcl/column/15/112000265/060300029/"/>
+<meta property="og:image" content="http://itpro.nikkeibp.co.jp/atcl/column/15/112000265/060300029/ph01.jpg"/>
+<meta name="twitter:image:src" content="http://itpro.nikkeibp.co.jp/atcl/column/15/112000265/060300029/ph01.jpg" />
+<meta property="og:description" content="　デスクトップにショートカットアイコンやフォルダーを置いて作業している人は、アプリで作業しているときにデスクトップを参照したくなることだろう。最も簡単なのは［Windows］＋［D］のショートカットキーだ。このキーを押すと、デスクトップのウィンドウを全て最小化し、デスクトップを表示できる。もう一度同じショートカットを押すと、アプリのウィンドウは元に戻る。" />
+<meta property="fb:app_id" content="462902687153079" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@nikkeibpITpro">
+<link rel="canonical" href="http://itpro.nikkeibp.co.jp/atcl/column/15/112000265/060300029/">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://itpro.nikkeibp.co.jp/rss/win.rdf" />
+<title>Q＆Aで分かるWindows 10 - ［Windows 10］ウィンドウを閉じずに一時的にデスクトップを見たい：ITpro</title>
+<link rel="next" href="http://itpro.nikkeibp.co.jp/atcl/column/15/112000265/060300029/?P=2">
+<link rel="SHORTCUT ICON" href="/images/n/itpro/2013/favicon.ico">
+<link href="/css/n/itpro/2012/common.css?20160425" rel="stylesheet" type="text/css">
+<script src="/js/n/gnavi/201601.js" defer></script>
+<link href="/css/n/gnavi/201601.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/css/n/itpro/2012/theme/system.css" type="text/css"><link rel="stylesheet" href="/css/n/itpro/2012/leaf.css" type="text/css">
+<link href="/css/n/itpro/2012/ad.css?20160516" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+var now_theme = 'system';
+var now_subtheme = 'win';
+
+var rankingType = 'subtheme';
+var ranking_filter_a = 'atype=win';
+var ranking_filter_b = 'theme=system';
+
+var no_change_st = false;
+
+var rel_id = '00007E0H';
+
+var rel_topid = '/sites/itpro.nikkeibp.co.jp/atcl/column/15/112000265/index.html';
+
+var query = '';
+var base = '';
+</script>
+<script type="text/javascript" src="/js/n/itpro/2014/jquery.js"></script>
+<script type="text/javascript" src="/js/n/itpro/2013/common.js?20160513"></script>
+<script type="text/javascript" src="/js/itpro/2012/theme/welcome2011_schedule.js"></script>
+<script type="text/javascript" src="/js/itpro/2012/theme/welcome2011.js?20160620"></script>
+<script type="text/javascript" src="/js/n/itpro/2012/leaf.js"></script>
+<script type="text/javascript" src="/js/n/itpro/2013/ranking.js"></script>
+<meta name="dag_aone_theme" content="win">
+<script src="//img.ak.impact-ad.jp/ut/nikkei_bp.js" type="text/javascript" defer></script>
+<script type="text/javascript" src="http://adpriv.nikkei.com/hserver/SITE=BPALL/AREA=TRGTFLG2/AAMSZ=HTML/OENCJP=UTF8"></script>
+<script type="text/javascript" src="http://adpriv.nikkei.com/hserver/SITE=BPALL/AREA=TRGTFLG/AAMSZ=HTML/OENCJP=UTF8"></script><script type="text/javascript">
+(function() {
+var useSSL = 'https:' == document.location.protocol;
+var src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+})();
+</script>
+<script type="text/javascript">
+
+googletag.pubads().setTargeting('optpat', document.cookie.match(new RegExp('(?:^|\\W)optpat=(\\w+)')) ? RegExp.$1 : 'NA');
+</script>
+<script type="text/javascript">
+googletag.pubads().setTargeting('nid', dag_NIDseg);
+</script>
+<script type="text/javascript">
+document.write('<scr'+'ipt type="text/javascript" src="http'+(location.protocol==='https:'?'s://s':'://')+'cdn.cxense.com/cx.js"></scr'+'ipt>');
+</script>
+<script type="text/javascript">
+googletag.pubads().setTargeting('CxSegments',cX.getUserSegmentIds({persistedQueryId:'7f33b36718301b094cd77f074490dbf21c1f1f4f'}));
+</script><script type="text/javascript">
+googletag.pubads().setTargeting('a1',['']);
+</script>
+<script type="text/javascript">
+if (document.cookie.match(/(^|; ?)AD_WEL_RCT_sync=([^;]+)(;|$)/)){
+ googletag.pubads().setTargeting('AD_WEL_RCT_sync', RegExp.$2.replace(/\W/g, ''));
+}
+if (document.referrer){
+ if (document.referrer.match(/([a-z\.]*news|headlines)\.yahoo\.co\.jp/i)){
+  googletag.pubads().setTargeting('REF', 'Yahoo');
+ }
+}
+googletag.pubads().setTargeting('ITPserial','3830af8469');
+googletag.pubads().setTargeting('CMStheme','win');
+googletag.defineSlot('/54271731/ITP/billboard', [[970, 20], [970, 90]], 'div-gpt-ad-billboard').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/rectangle1/system/win', [[300, 250], [300, 300], [300, 600]], 'div-gpt-ad-rectangle1').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/side_square', [125, 125], 'div-gpt-ad-side_square').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/rectangle2', [[300, 250], [300, 300], [300, 600]], 'div-gpt-ad-rectangle2').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/topics_this_week', [1, 1], 'div-gpt-ad-topics_this_week_01').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/topics_this_week', [1, 1], 'div-gpt-ad-topics_this_week_02').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/topics_this_week', [1, 1], 'div-gpt-ad-topics_this_week_03').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/topics_this_week', [1, 1], 'div-gpt-ad-topics_this_week_04').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/topics_this_week', [1, 1], 'div-gpt-ad-topics_this_week_05').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/topics_this_week', [1, 1], 'div-gpt-ad-topics_this_week_06').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/topics_this_week', [1, 1], 'div-gpt-ad-topics_this_week_07').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/event_information', [1, 1], 'div-gpt-ad-event_information_01').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/event_information', [1, 1], 'div-gpt-ad-event_information_02').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/event_information', [1, 1], 'div-gpt-ad-event_information_03').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/theme_text/system/win', [1, 1], 'div-gpt-ad-theme_text_01').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/theme_text/system/win', [1, 1], 'div-gpt-ad-theme_text_02').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/theme_text/system/win', [1, 1], 'div-gpt-ad-theme_text_03').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/theme_text/system/win', [1, 1], 'div-gpt-ad-theme_text_04').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/theme_text/system/win', [1, 1], 'div-gpt-ad-theme_text_05').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/_todays_pickup', [1, 1], 'div-gpt-ad-_todays_pickup_01').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/_todays_pickup', [1, 1], 'div-gpt-ad-_todays_pickup_02').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/_todays_pickup', [1, 1], 'div-gpt-ad-_todays_pickup_03').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/_todays_pickup', [1, 1], 'div-gpt-ad-_todays_pickup_04').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/_it_investment', [1, 1], 'div-gpt-ad-_it_investment').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/_pickup_contens', [1, 1], 'div-gpt-ad-_pickup_contens_01').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/_pickup_contens', [1, 1], 'div-gpt-ad-_pickup_contens_02').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/_pickup_contens', [1, 1], 'div-gpt-ad-_pickup_contens_03').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/_pickup_contens', [1, 1], 'div-gpt-ad-_pickup_contens_04').addService(googletag.pubads());
+googletag.defineSlot('/54271731/ITP/__itp_itprospecial', [1, 1], 'div-gpt-ad-__itp_itprospecial').addService(googletag.pubads());
+googletag.pubads().enableSyncRendering();
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+</script></head>
+<body>
+<!--googleoff: index-->
+<a name="top"></a>
+<div id="wrapper">
+<div id="header">
+<div id="bpGlobalHeader" class="gnav-201601">
+<div id="bpGlobalHeaderContent">
+<div id="bpGlobalInfo"></div>
+<ul id="bpGlobalNavi" class="itpro"><li class="www"><a href="http://www.nikkeibp.co.jp/?gnavi" title="nikkei BPnet：日経BPのビジネス情報ポータル">BPnet</a></li>
+<li class="business"><a href="http://business.nikkeibp.co.jp/?gnavi" title="日経ビジネスオンライン：リーダーのための経営・マネジメント情報">ビジネス</a></li>
+<li class="itpro"><a href="http://itpro.nikkeibp.co.jp/?gnavi" title="ITpro：ITプロフェッショナルのための専門情報">IT</a></li>
+<li class="techon"><a href="http://techon.nikkeibp.co.jp/?gnavi" title="日経テクノロジーオンライン：技術者を応援する総合情報サイト">テクノロジー</a></li>
+<li class="medical"><a href="http://medical.nikkeibp.co.jp/?gnavi" title="日経メディカル：医師・医療従事者のための総合医療情報ポータル">医療</a></li>
+<li class="kenplatz"><a href="http://kenplatz.nikkeibp.co.jp/?gnavi" title="日経アーキテクチュアほか建設・不動産の専門情報">建設・不動産</a></li>
+<li class="trendy"><a href="http://trendy.nikkeibp.co.jp/?gnavi" title="日経トレンディネット：トレンドウォッチ ポータル">TRENDY</a></li>
+<li class="wol"><a href="http://wol.nikkeibp.co.jp/?gnavi" title="日経ウーマンオンライン：はたらくわたし、きれいなわたし">WOMAN</a></li>
+<li class="selection"><a href="http://www.nikkeibp.co.jp/selection/?gnavi" title="日経BPセレクション：厳選アイテムのダイレクトショップ">ショッピング</a></li>
+<li class="career"><a href="https://career.nikkei.co.jp/shokushu/it-network/?adid=BP_SB_H_I" target="_blank">転職<span></span></a>
+<ul id="bpGlobalNaviSubMenu">
+<li class="executive"><a href="http://tenshoku.nikkei.co.jp/r-agent/?n_cid=EJHRAG766" target="_blank" title="エグゼクティブ転職：ヘッドハンティング転職サイト">エグゼクティブ転職<span></span></a></li>
+<li class="careernet"><a href="https://career.nikkei.co.jp/shokushu/it-network/?adid=BP_SB_H_I" target="_blank" title="日経キャリアNET：質の高い転職・求人情報">日経キャリアNET<span></span></a></li>
+</ul>
+</li>
+<li class="nng"><a href="http://natgeo.nikkeibp.co.jp/?gnavi" target="_blank" title="NATIONAL GEOGRAPHIC：地球の素顔をビジュアルに伝える">ナショジオ<span></span></a></li>
+<li class="nikkei"><a href="http://www.nikkei.com/" target="_blank" title="日本経済新聞 電子版">日経電子版<span></span></a></li>
+<li class="common">
+<div id="bpcmsResIf" style="display:none"><!--{'r':'bparticle', 't':'win','a':'win', 'ai':'itpro', 's':'ITP', 'u':'00007E0H', 'si':'18cc6104-293d-11e6-b478-03ae148b6aa8'}--></div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-45149931-1', 'itpro.nikkeibp.co.jp');
+  ga('send', 'pageview');
+</script>
+<script type="text/javascript">
+
+document.write('<img src="/images/itpro/2009/common/cnt.gif?u=' + url2path(location.href) + '&f=win&t=system&d=' + new Date().getTime() + '" width="1" height="1"><br>');
+
+document.write('<img src="/image/mediacensus/ITP.gif?' + new Date().getTime() + '" width="1" height="1"><br>');
+</script>
+<!-- SiteCatalyst code version: H.25.5.
+Copyright 1996-2013 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript">
+var s_account = "";
+</script>
+<script language="JavaScript" type="text/javascript" src="/js/sitecatalyst/s_code2015.js"></script>
+<script language="JavaScript" type="text/javascript" id="bpcmsSiteCatalystJs"><!--
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+
+(function(){
+/************************** ページ毎の定義 **************************/
+ var aggregateID = "itpro10-win";
+ var parentThemeName = "情報システム";
+ var themeName = "Windows";
+ var themeID = "win";
+ var pageTitle = "［Windows 10］ウィンドウを閉じずに一時的にデスクトップを見たい";
+ var parentTitle = "Q＆Aで分かるWindows 10";
+ var authorName = "竹内 亮介＝テクニカルライター";
+ var articlePageNo = "1";
+ var articleID = "00007E0H";
+ var TieupID = "";
+ var ccateid = "COLUMN";
+
+
+ var mediaid = "ITP";
+
+ var section = pageTitle;
+
+ var authkind = "itpro;itpro";
+
+ var authresult = "AUTHNG";
+
+ var publish = "20160705";
+
+//********************************************************************/
+ var conv = function(s){
+  s = s.replace(/[^\u0020-\u007E\u00A1-\u00AC\u00AE-\u00FF\u0370-\u04FF\u3005\u3007\u303B\u3220-\u3243\u3280-\u32B0\u3400-\u9FFF\uF900-\uFAFF\uD840-\uD87F\uC200-\uC3FF\uDC00-\uDFFF\u2010-\u2312\u2600-\u26FF\u3041-\u3093\u30A1-\u30F6\u3000-\u301C\u309B-\u309E\u30FB-\u30FE\u4E00-\u9FCC\uFFE3\u818F\uFF5E\uFF01-\uFF5D\uFF61-\uFF9F]/g, '');
+  s = s.replace(/^(.{33}).*$/, '$1');
+  return(s);
+ }
+ s.prop1 = conv(s.channel + parentThemeName);
+ s.prop2 = conv(s.prop1 + '-' + themeName);
+ s.prop3 = section;
+ s.prop4 = (articleID != '') ? (s.channel + articleID) : '';
+ s.prop5 = (articlePageNo != '') ? articlePageNo : '';
+ s.prop15 = s.getNewRepeat();
+ s.prop19 = conv((pageTitle != '') ? pageTitle : document.title);
+ s.prop20 = (aggregateID != '') ? aggregateID : '';
+ s.prop21 = conv((themeID != '') ? themeID : 'NOTHEME');
+ s.prop22 = conv((TieupID != '') ? TieupID : '未設定');
+ s.prop23 = conv((parentTitle != '') ? parentTitle : '');
+ s.prop24 = conv((authorName != '') ? authorName : '');
+ s.prop42 = publish;
+ s.prop43 = ccateid;
+ s.prop44 = mediaid;
+ s.eVar64 = s.prop2;
+ s.eVar67 = s.prop15;
+ s.prop32 = s.eVar57 = authresult;
+ s.prop33 = s.eVar59 = authkind;
+
+ var d = new Date(0);
+ document.cookie = 'bpcmsRef=;path=/; domain=' + location.hostname + '; expires=' + d.toGMTString();
+ document.cookie = 'bpcmsRef=;path=/; domain=.' + location.hostname + '; expires=' + d.toGMTString();
+ document.cookie = 'bpcmsRef=;path=/; expires=' + d.toGMTString();
+})();
+//************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.25.5. -->
+</li>
+</ul>
+</div>
+</div><!--/.gnav-201601-->
+<div id="localHeader">
+<div class="logo"><a href="/">ITpro</a></div>
+<div class="nc">by <a href="/NCD/"><img src="/images/n/itpro/2012/nc_logo.jpg"></a></div>
+<div class="headLoginBox">
+<a href="/free/reguser/">会員登録</a>｜<a onclick="return(bpsso.liMov(0))" href="#">ログイン</a>
+</div>
+<div class="logoBox">
+<a href="/NCF/"><img src="/images/n/itpro/2012/header_logo_ncf.gif" alt="" border="0"></a>
+<a href="/iti/?xadid=9499"><img src="/images/n/itpro/2012/header_logo_iti.gif" alt="" border="0"></a>
+<a href="/active/"><img src="/images/n/itpro/2012/header_logo_active.gif" alt="" border="0"></a>
+<a href="/marketing/"><img src="/images/n/itpro/2012/header_logo_marketing.gif" alt="" border="0"></a>
+<a href="/success/"><img src="/images/n/itpro/2012/header_logo_success.gif" alt="" border="0"></a>
+<a href="http://special.nikkeibp.co.jp/as/itpsp/"><img src="/images/n/itpro/2012/header_logo_special.gif" alt="" border="0"></a>
+</div><!-- /.logoBox -->
+<div id="infoNews" class="news">
+<ul>
+<li></li>
+</ul>
+</div><!-- /#infoNews --></div><!-- /#localHeader -->
+
+<div id="localNaviWrapper">
+<div id="localNavi">
+<ul>
+<li id="menu0" >
+<a href="/">トップ</a>
+</li>
+<li id="menu1" >
+<a href="/management/">経営</a>
+<ul>
+<li><a href="/cio/">情報戦略/業務革新</a></li>
+<li><a href="/erm/">BCP/危機管理</a></li>
+<li><a href="/tousei/">IFRS（国際会計基準）</a></li>
+<li><a href="/govtech/">電子行政</a></li>
+<li><a href="/ittrend/">業界動向</a></li>
+</ul>
+</li>
+<li id="menu2" class="now">
+<a href="/johosystem/">情報システム</a>
+<ul>
+<li><a href="/cloud/">クラウド</a></li>
+<li><a href="/virtual/">仮想化</a></li>
+<li><a href="/oss/">オープンソース/Linux</a></li>
+<li><a href="/upper/">開発プロセス</a></li>
+<li><a href="/win/">Windows</a></li>
+<li><a href="/uxui/">UX/UI</a></li>
+<li><a href="/byod/">BYOD</a></li>
+</ul>
+</li>
+<li id="menu3" >
+<a href="/network/">ネットワーク</a>
+<ul>
+<li><a href="/smartphone/">スマートフォン</a></li>
+<li><a href="/keitai/">モバイル/無線通信</a></li>
+<li><a href="/broadcast/">放送</a></li>
+<li><a href="/openflow/">SDN/OpenFlow</a></li>
+</ul>
+</li>
+<li id="menu4" >
+<a href="/security/">セキュリティ</a>
+<ul>
+<li><a href="/attack/">標的型攻撃</a></li>
+</ul>
+</li>
+<li id="menu5" >
+<a href="/develop/">ソフト開発</a>
+</li>
+<li id="menu6" >
+<a href="/pc/">PC</a>
+</li>
+<li id="menu7" >
+<a href="/selfup/">selfup</a>
+</li>
+<li id="menu8" >
+<a href="/release/">プレスリリース</a>
+</li>
+<li id="menu9" >
+<a href="/wp/">ホワイトペーパー</a>
+</li>
+<li id="menu10" >
+<a href="/ciomagazine/">CIO Magazine</a>
+</li>
+<li id="menu11" >
+<a href="/computerworld/">Computerworld</a>
+</li>
+</ul>
+</div><!-- /#localNavi -->
+</div><!-- /#localNaviWrapper -->
+
+<div id="div-gpt-ad-billboard">
+<script type="text/javascript">
+googletag.display('div-gpt-ad-billboard');
+</script>
+</div></div><!-- /#header -->
+<div id="contentsWrapper">
+<div id="contents">
+<div id="mainContent">
+<div class="inner">
+<!--googleon: index-->
+<div class="breadcrumb">
+<a href="/">トップ</a>
+
+ ＞ <a href="/johosystem/">情報システム</a>
+
+ ＞ <a href="/win/">Windows</a>
+
+ ＞ <span>［Windows 10］ウィンドウを閉じずに一時的にデスクトップを見たい</span>
+</div>
+<!--googleoff: all-->
+<div class="articleBox">
+<div class="topics system">
+<h3>情報システムのトピックス<span>-PR-</span></h3>
+<ul class="title-small">
+<li><div id="div-gpt-ad-theme_text_01"><script type="text/javascript">googletag.display('div-gpt-ad-theme_text_01');</script></div></li>
+<li><div id="div-gpt-ad-theme_text_02"><script type="text/javascript">googletag.display('div-gpt-ad-theme_text_02');</script></div></li>
+<li><div id="div-gpt-ad-theme_text_03"><script type="text/javascript">googletag.display('div-gpt-ad-theme_text_03');</script></div></li>
+<li><div id="div-gpt-ad-theme_text_04"><script type="text/javascript">googletag.display('div-gpt-ad-theme_text_04');</script></div></li>
+<li><div id="div-gpt-ad-theme_text_05"><script type="text/javascript">googletag.display('div-gpt-ad-theme_text_05');</script></div></li></ul>
+</div>
+</div>
+<div id="toptitleArea">
+<div class="topTitleBar">
+  <h2><a href="/atcl/column/15/112000265/">Q＆Aで分かるWindows 10</a></h2>
+  <a href="http://itpro.nikkeibp.co.jp/" target="_blank"><img src="/images/n/itpro/2012/leaf/medialogo/ITP.gif" alt="ITpro"></a>
+  </div>
+</div><h1 class="kijiTitle">
+［Windows 10］ウィンドウを閉じずに一時的にデスクトップを見たい</h1>
+
+<div id="author">
+<span class="displayDate">
+2016/07/05</span><br>
+竹内 亮介＝テクニカルライター
+（<a href="/search/index.html?q=%E7%AB%B9%E5%86%85%E4%BA%AE%E4%BB%8B">筆者執筆記事一覧</a>）
+</div>
+<div id="kijiBox">
+
+<div class="leafNaviTop">
+<div class="indexLink"><a href="/atcl/column/15/112000265/" class="mokuji">連載目次へ &gt;&gt;</a></div>
+<div class="snsBtn">
+
+<ul class="social_buttons social_buttons_vertical">
+<li>
+<li><div class="fb-share-button" data-href="http://itpro.nikkeibp.co.jp/atcl/column/15/112000265/060300029/?n_cid=nbpitp_fbbn_top" data-layout="box_count"></div>
+</li>
+<li>
+<a href="http://b.hatena.ne.jp/entry/http://itpro.nikkeibp.co.jp/atcl/column/15/112000265/060300029/" class="hatena-bookmark-button" data-hatena-bookmark-title="［Windows 10］ウィンドウを閉じずに一時的にデスクトップを見たい：ITpro" data-hatena-bookmark-layout="vertical-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+</li>
+<li><a data-pocket-label="pocket" data-save-url="http://itpro.nikkeibp.co.jp/atcl/column/15/112000265/060300029/" data-pocket-count="vertical" class="pocket-btn" data-lang="ja"></a></li>
+<li><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://itpro.nikkeibp.co.jp/atcl/column/15/112000265/060300029/?n_cid=nbpitp_twbn_top" data-lang="ja" data-dnt="true" data-related="nikkeibpITpro,bpITproNews" data-hashtags="ITpro">ツイート</a></li>
+<li>
+<a class="evernote-clip-button" href="javascript:;;" data-id="1">
+<img src="/images/n/itpro/2013/btn_evernote_clip1x.png" alt="保存する"><!-- This can be customized -->
+</a>
+</li>
+</ul>
+
+</div><!-- /.snsBtn -->
+
+</div><!-- /.leafNaviTop -->
+<!-- cxenseparse_start -->
+<div id="kiji">
+
+<p>
+　デスクトップにショートカットアイコンやフォルダーを置いて作業している人は、アプリで作業しているときにデスクトップを参照したくなることだろう。最も簡単なのは［Windows］＋［D］のショートカットキーだ。このキーを押すと、デスクトップのウィンドウを全て最小化し、デスクトップを表示できる。もう一度同じショートカットを押すと、アプリのウィンドウは元に戻る。
+</p>
+
+<div class="bpbox_center">
+<div class="bpimage_center" style="width:500px;"><div class="bpimage_image"><a href="/atcl/column/15/112000265/060300029/?SS=imgview&amp;FD=1153259116" target="_blank"><img src="/atcl/column/15/112000265/060300029/ph01.jpg?__scale=w:500,h:316&_sh=0c003f0100" width="500" height="316" alt="" /></a></div>
+<div class="bpimage_title">●ショートカットキーで素早くデスクトップを参照できる</div>
+<div class="bpimage_caption">作業用のアプリをたくさん起動して壁紙が見えない状況で、［Windows］＋［D］のショートカットを押す</div><div class="bpimage_click">[画像のクリックで拡大表示]</div></div>
+</div>
+<div class="bpbox_center">
+<div class="bpimage_center" style="width:500px;"><div class="bpimage_image"><a href="/atcl/column/15/112000265/060300029/?SS=imgview&amp;FD=1154182637" target="_blank"><img src="/atcl/column/15/112000265/060300029/ph02.jpg?__scale=w:500,h:313&_sh=09307c0570" width="500" height="313" alt="" /></a></div>
+
+<div class="bpimage_caption">するとアプリのウィンドウが全てタスクバーに最小化し、デスクトップが見えるようになる</div><div class="bpimage_click">[画像のクリックで拡大表示]</div></div>
+</div>
+
+</div>
+<!-- cxenseparse_end -->
+<div class="nextPageBtn notNextPage">
+<span>タスクバーの右端にある細長い領域をクリックしても...</span>
+</div>
+<div id="naviBottom">
+<div class="pageNumber">
+<span>1</span>
+<span>2</span>
+<span class="tonext">次ページ&gt;&gt;</span>
+</div>
+</div>
+
+<div id="authorizeMessage">
+
+次ページ以降はITpro会員(無料)の方のみお読みいただけます。<br>
+会員の方は、
+<a onclick="return(bpsso.liMov(0))" href="#">ログイン</a>してご覧ください。<br>
+まだ会員でない方は、ぜひ<a href="http://itpro.nikkeibp.co.jp/free/reguser/">登録（無料）</a>していただき、ITproの豊富なコンテンツをご覧ください。
+</div>
+</div>
+
+<div id="dag_inread"></div>
+
+<div class="snsBottom">
+<div class="socialBtnArea">
+<ul class="social_buttons social_buttons_vertical">
+<li>
+<div class="fb-share-button" data-href="http://itpro.nikkeibp.co.jp/atcl/column/15/112000265/060300029/?n_cid=nbpitp_fbbn_bottom" data-layout="box_count"></div>
+</li>
+<li>
+<a href="http://b.hatena.ne.jp/entry/http://itpro.nikkeibp.co.jp/atcl/column/15/112000265/060300029/" class="hatena-bookmark-button" data-hatena-bookmark-title="［Windows 10］ウィンドウを閉じずに一時的にデスクトップを見たい：ITpro" data-hatena-bookmark-layout="vertical-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+</li>
+<li><a data-pocket-label="pocket" data-save-url="http://itpro.nikkeibp.co.jp/atcl/column/15/112000265/060300029/" data-pocket-count="vertical" class="pocket-btn" data-lang="ja"></a></li>
+<li><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://itpro.nikkeibp.co.jp/atcl/column/15/112000265/060300029/?n_cid=nbpitp_twbn_top" data-lang="ja" data-dnt="true" data-related="nikkeibpITpro,bpITproNews" data-hashtags="ITpro">ツイート</a></li>
+<li>
+<a class="evernote-clip-button" href="javascript:;;" data-id="1">
+<img src="/images/n/itpro/2013/btn_evernote_clip1x.png" alt="保存する"><!-- This can be customized -->
+</a>
+</li>
+<li>
+<a href="mailto:?subject=ITpro：［Windows 10］ウィンドウを閉じずに一時的にデスクトップを見たい&amp;body=http://itpro.nikkeibp.co.jp/atcl/column/15/112000265/060300029/"><img src="/images/n/itpro/2012/mail_icon.gif" width="30" height="30" alt="記事をメールで送る"></a>
+</li>
+<li>
+<a href="#" title="印刷する" onclick="window.open(window.location.href.replace(/[#\?].+$/, '') + '?ST=print', '_blank');return(false)"><img src="/images/n/itpro/2012/print_icon.gif" width="20" height="20" alt="印刷する"></a>
+</li>
+</ul>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.6&appId=462902687153079";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+<script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<script type="text/javascript">
+$(function(){
+  var getUrl = ($($('.headLoginBox a').get(1)).html() == 'ログアウト') ? '?ST=print' : '?ST=management';
+  $.ajax({
+    url: getUrl,
+    success: function(html){
+      var bodyText = $(html).find('#kiji');
+      if($(bodyText).find('.bpbox_right:first-child .bpimage_set').length >= 2){
+        $(bodyText).append($(bodyText).find('.bpbox_right:first-child'));
+      }
+      $(bodyText).find('.bpbox_right .bpimage_set,.bpbox_left .bpimage_set,.bpimage_right,.bpimage_left,.bpimage_center').each(function(){
+        var title ='',caption='',titleCaption='';
+        $(this).find('.bpimage_image').each(function(){
+        if($(this).find('a').length > 0){
+        $(this).replaceWith($(this).find('a').html());
+        }else{
+        $(this).replaceWith($(this).find('img'));
+        }
+      });
+      title = ($(this).find('.bpimage_title').length > 0) ? $(this).find('.bpimage_title').html() : '';
+      caption = ($(this).find('.bpimage_caption').length > 0) ? $(this).find('.bpimage_caption').html() : '';
+      $(this).find('.bpimage_title').remove();
+      $(this).find('.bpimage_caption').remove();
+      $(this).find('.bpimage_click').remove();
+      titleCaption = title + ' ' + caption;
+      titleCaption = titleCaption.replace(/^ /,'').replace(/ $/,'');
+      $(this).replaceWith('<figure>'+$(this).html()+'<figcaption>'+ titleCaption +'</figcaption></figure>');
+      });
+      $(bodyText).find('.bpimage_triple,.bpimage_double,.bpimage_caption_right').each(function(){
+        var title ='',caption='',titleCaption='';
+        title = ($(this).find('.bpimage_title').length > 0) ? $(this).find('.bpimage_title').html() : '';
+        caption = ($(this).find('.bpimage_caption').length > 0) ? $(this).find('.bpimage_caption').html() : '';
+        $(this).find('.bpimage_title').remove();
+        $(this).find('.bpimage_caption').remove();
+        $(this).find('.bpimage_click').remove();
+        titleCaption = title + ' ' + caption;
+        titleCaption = titleCaption.replace(/^ /,'').replace(/ $/,'');
+        $(this).replaceWith($(this).html() + '<figure><figcaption>'+ titleCaption +'</figcaption></figure>');
+      });
+      $(bodyText).append('<p>本コンテンツの無断転載、配信、共有利用を禁止します。</p>');
+      $(bodyText).find('div').each(function(){
+        $(this).removeAttr('style');
+      });
+      window.EVERNOTE_CLIP_INFO = {
+        1: {
+          title: '［Windows 10］ウィンドウを閉じずに一時的にデスクトップを見たい',
+          subtitle: '',
+          url: 'http://itpro.nikkeibp.co.jp/atcl/column/15/112000265/060300029/',
+          dateExact: '2016/07/05',
+          contentHTML: bodyText.html().replace(/[\n\r\t]/g,'')
+        }
+      };
+    }
+  });
+});
+(function() {
+var po = document.createElement('script');
+po.type = 'text/javascript';
+po.async = true;
+po.src = 'https://cdn1.evernote.com/clipncite/widget.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(po, s);
+var po2 = document.createElement('script');
+po2.type = 'text/javascript';
+po2.async = true;
+po2.src = 'https://cdn1.evernote.com/clipncite/nikkei_itpro_formatter.js';
+s.parentNode.insertBefore(po2, po.nextElementSibling || null);
+})();
+</script>
+</div><!-- /.socialBtnArea -->
+</div><!-- /.snsBottom --><!--googleoff: all-->
+<div class="endNoBr" style="margin-top:10px;"></div>
+
+<div style="display: block; margin:0 35px 30px 35px;" class="focusSponser">
+</div>
+<!-- Cxense content widget: Cxenseウィジット（末尾テキスト） -->
+<div id="cx_c230b3940cd91967614bf17af50ccbd5d09b072d" style="display:none"></div>
+<script type="text/javascript">
+    var cX = cX || {}; cX.callQueue = cX.callQueue || [];
+    cX.callQueue.push(['insertWidget', {
+        widgetId: 'c230b3940cd91967614bf17af50ccbd5d09b072d',
+        insertBeforeElementId: 'cx_c230b3940cd91967614bf17af50ccbd5d09b072d',
+        width: 540, height: 275, renderTemplateUrl: 'auto'
+    }]);
+
+    // Async load of cx.js
+    (function(d,s,e,t){e=d.createElement(s);e.type='text/java'+s;e.async='async';
+    e.src='http'+('https:'===location.protocol?'s://s':'://')+'cdn.cxense.com/cx.js';
+    t=d.getElementsByTagName(s)[0];t.parentNode.insertBefore(e,t);})(document,'script');
+</script>
+<!-- End of Cxense content widget -->
+  <div id="seriesList">
+    <h4>連載新着<a href="/atcl/column/15/112000265/">連載目次へ &gt;&gt;</a></h4>
+    <ul>
+    <li><a href="/atcl/column/15/112000265/060300042/">［Windows 10］「タブレットモード」はどう使う？</a> （2016/07/11）</li>
+          <li><a href="/atcl/column/15/112000265/060300040/">［Windows 10］アクションセンターの下部にあるボタンの役割は？</a> （2016/07/11）</li>
+          <li><a href="/atcl/column/15/112000265/060300039/">［Windows 10］頻繁に表示される通知を消したい</a> （2016/07/11）</li>
+          <li><a href="/atcl/column/15/112000265/060300041/">［Windows 10］クイックアクションをカスタマイズしたい</a> （2016/07/11）</li>
+          </ul>
+    </div>
+  <div class="weeklyTopicsCommon">
+<h3>今週のトピックス<span>-PR-</span></h3>
+<ul>
+<li><div id="div-gpt-ad-topics_this_week_01"><script type="text/javascript">googletag.display('div-gpt-ad-topics_this_week_01');</script></div></li>
+<li><div id="div-gpt-ad-topics_this_week_02"><script type="text/javascript">googletag.display('div-gpt-ad-topics_this_week_02');</script></div></li>
+<li><div id="div-gpt-ad-topics_this_week_03"><script type="text/javascript">googletag.display('div-gpt-ad-topics_this_week_03');</script></div></li>
+<li><div id="div-gpt-ad-topics_this_week_04"><script type="text/javascript">googletag.display('div-gpt-ad-topics_this_week_04');</script></div></li>
+<li><div id="div-gpt-ad-topics_this_week_05"><script type="text/javascript">googletag.display('div-gpt-ad-topics_this_week_05');</script></div></li>
+<li><div id="div-gpt-ad-topics_this_week_06"><script type="text/javascript">googletag.display('div-gpt-ad-topics_this_week_06');</script></div></li>
+<li><div id="div-gpt-ad-topics_this_week_07"><script type="text/javascript">googletag.display('div-gpt-ad-topics_this_week_07');</script></div></li></ul>
+</div>
+<div class="dailyPickup">
+<h3>今日のピックアップコンテンツ<span>-PR-</span></h3>
+<ul>
+<li><div id="div-gpt-ad-_todays_pickup_01"><script type="text/javascript">googletag.display('div-gpt-ad-_todays_pickup_01');</script></div></li>
+<li><div id="div-gpt-ad-_todays_pickup_02"><script type="text/javascript">googletag.display('div-gpt-ad-_todays_pickup_02');</script></div></li>
+<li><div id="div-gpt-ad-_todays_pickup_03"><script type="text/javascript">googletag.display('div-gpt-ad-_todays_pickup_03');</script></div></li>
+<li><div id="div-gpt-ad-_todays_pickup_04"><script type="text/javascript">googletag.display('div-gpt-ad-_todays_pickup_04');</script></div></li></ul>
+<div class="endNobr"></div>
+<p class="linkTo"><a target="_blank" href="http://special.nikkeibp.co.jp/as/itpsp/">&gt;&gt;もっと見る</a></p>
+</div>
+<script type="text/javascript">
+<!--
+var setPF = "";
+setPF = navigator.platform.toLowerCase();
+if(setPF == 'ipad'){
+  bakeCookie('spcheck', 'pc')
+}
+//-->
+</script>
+
+<!-- DFP ITpro Special -->
+<div id="bottomPickup2014">
+<h2>ITpro Special</h2>
+<div class="whatsNew">
+<div class="categoryList">
+<div>
+<h3>経営</h3>
+<ul>
+<li><a href="http://special.nikkeibp.co.jp/atclh/ITP/16/dell0704/" rel="nofollow TMI05535" target="_blank">ワークスタイル変革に関する調査</a></li>
+<li><a href="http://special.nikkeibp.co.jp/atclh/ITP/16/ws2016_hp/" rel="nofollow TTS05495" target="_blank">170カ国/約30万人が使う情報活用基盤の中身</a></li>
+<li><a href="http://special.nikkeibp.co.jp/atclh/ITP/16/ws2016_intel/" rel="nofollow TMI05492" target="_blank">わずか6人に1人…今の日本に足りないITとは</a></li>
+<li><a href="http://special.nikkeibp.co.jp/atclh/ITP/16/ws2016_nssol/" rel="nofollow TMI05493" target="_blank">デバイス管理に効くグローブボックスとは？</a></li>
+<li><a href="http://special.nikkeibp.co.jp/atclh/ITP/16/ws2016_recomot/" rel="nofollow TMS05494" target="_blank">守るべきは「端末」よりも「アプリ」だった</a></li>
+<li><a href="http://special.nikkeibp.co.jp/atclh/ITP/16/ws2016/" rel="nofollow TMI05491" target="_blank">職場満足度98.2％！ JAL流「働き方改革術」</a></li>
+</ul>
+</div>
+<div>
+<h3>アプリケーション／DB／ミドルウエア</h3>
+<ul>
+<li><a href="http://special.nikkeibp.co.jp/atclh/ITP/16/servicenow0705/" rel="nofollow TMI05551" target="_blank">グリー／急成長にIT部門はどう対応したのか</a></li>
+<li><a href="http://special.nikkeibp.co.jp/atclh/ITP/16/servicenow0705_02/" rel="nofollow TKK05569" target="_blank">全社のムダを排除！　IT部門にできることは</a></li>
+<li><a href="http://special.nikkeibp.co.jp/atclh/ITP/16/dell0705/" rel="nofollow TMS05567" target="_blank">会社より自宅の方が仕事が進む人が増加中？</a></li>
+<li><a href="http://special.nikkeibp.co.jp/atclh/ITP/16/biz_integral0705/" rel="nofollow TKK05568" target="_blank">ERPシステム導入で効果を出すためには</a></li>
+<li><a href="http://special.nikkeibp.co.jp/atclh/ITP/16/sas0621/" rel="nofollow TKK05502" target="_blank">顧客に選ばれる企業―その「共通点」とは？</a></li>
+</ul>
+</div>
+<div>
+<h3>運用管理</h3>
+<ul>
+<li><a href="http://special.nikkeibp.co.jp/atclh/ITP/16/bit_isle0705/" rel="nofollow TMI05564" target="_blank">パブリッククラウドの課題を解決する最新DC</a></li>
+<li><a href="http://special.nikkeibp.co.jp/atclh/ITP/16/panasonic0624/" rel="nofollow TMI05526" target="_blank">日本最大級の民営鉄道が導入するタフパッド</a></li>
+</ul>
+</div>
+<div>
+<h3>設計／開発</h3>
+<ul>
+<li><a href="http://special.nikkeibp.co.jp/atclh/ITP/16/imkk0705/" rel="nofollow TMS05565" target="_blank">大規模バッチシステムも超高速開発できる？</a></li>
+<li><a href="http://special.nikkeibp.co.jp/atclh/ITP/16/littlesoft0524/p5/" rel="nofollow TKK05411" target="_blank">柔軟な開発基盤「LSクラウド・ウエア」</a></li>
+<li><a href="http://special.nikkeibp.co.jp/panasonic/businessmobile/special/20160610/" rel="nofollow TTS04501" target="_blank">誕生から20年・そしてレッツノートの「未来」へ</a></li>
+</ul>
+</div>
+<div>
+<h3>サーバー／ストレージ</h3>
+<ul>
+<li><a href="http://special.nikkeibp.co.jp/atclh/ITP/16/hitachi0628/" rel="nofollow TMS05441" target="_blank">オンプレかクラウドか…上田ハーローの決断</a></li>
+<li><a href="http://special.nikkeibp.co.jp/atcl/ITP/16/lenovo0621/" rel="nofollow TMS05469" target="_blank">オンプレミス環境でPay-As-You-Growを実現</a></li>
+<li><a href="http://special.nikkeibp.co.jp/atclh/ITP/15/hpe/" rel="nofollow TMI04959" target="_blank">“アイデアエコノミー”の時代がやってきた</a></li>
+</ul>
+</div>
+<div>
+<h3>ネットワーク／通信サービス</h3>
+<ul>
+<li><a href="http://special.nikkeibp.co.jp/atclh/ITP/16/multi0705/" rel="nofollow TMI05563" target="_blank">実益を生むIoT活用「3つのポイント」とは？</a></li>
+</ul>
+</div>
+<div>
+<h3>セキュリティ</h3>
+<ul>
+<li><a href="http://special.nikkeibp.co.jp/atclh/ITP/16/checkpoint0705/" rel="nofollow TMS05566" target="_blank">ランサムウエアの最新動向と対策のポイント</a></li>
+<li><a href="http://special.nikkeibp.co.jp/atclh/ITP/16/vmware0705/" rel="nofollow TKK05570" target="_blank">対策を突破された後のこと考えていますか？</a></li>
+<li><a href="http://special.nikkeibp.co.jp/atcl/ITP/16/security06030_01/" rel="nofollow TMI05534" target="_blank">情報セキュリティ戦略セミナー【レビュー】</a></li>
+<li><a href="http://special.nikkeibp.co.jp/atcl/ITP/16/security06030_02/" rel="nofollow TKK05536" target="_blank">攻撃者を“おとり領域”に誘導して検知する</a></li>
+<li><a href="http://special.nikkeibp.co.jp/atcl/ITP/16/security06030_03/" rel="nofollow TTS05539" target="_blank">セキュリティを効果的に高める仮想化技術</a></li>
+</ul>
+</div>
+</div>
+</div>
+<p class="linkTo"><a href="http://special.nikkeibp.co.jp/as/itpsp/" target="_blank">&gt;&gt;もっと見る</a></p>
+</div>
+<p class="pageTop">
+<a href="#top">▲ ページトップ</a>
+</p>
+</div>
+</div>
+<div id="subContent">
+<!--googleoff: index-->
+<div class="sideSarch">
+<form method="get" action="#" onsubmit="if (this.q.value==''){alert('検索キーワードが入力されていません')}else{location.href='/search/index.html?q='+encodeURI(this.q.value)};return(false);" id="sideSearchForm">
+<div class="inputKey"><input size="15" name="q" class="textbox" type="text"></div>
+<div class="inputBtn"><input src="/images/n/itpro/2013/btn_search.gif" alt="検索" type="image" width="51" height="20" class="searchBtn"></div>
+<div class="detailLink"><a href="/search/index.html">詳細検索</a></div>
+</form>
+</div><!-- /.sideSarch -->
+<div class="rectangle">
+<div id="div-gpt-ad-rectangle1">
+<script type="text/javascript">
+googletag.display('div-gpt-ad-rectangle1');
+</script>
+</div></div>
+<div class="editorArea">
+<h3><a href="/johosystem/">情報システムの最新記事<span>&gt;&gt;一覧</span></a></h3>
+<div class="box">
+<ul>
+<li><a href="/atcl/column/14/463805/070400094/">IT業界の多重下請け構造の瓦解、技術者に“失業”の覚悟はあるか</a></li>
+<li><a href="/atcl/column/16/060700122/062100033/">［優良賞］未来のスマートホームを体験、音声やスマホから多様な家電を操作</a></li>
+<li><a href="/atcl/column/16/060700122/062100032/">［優良賞］コンシェルジュロボットが家で待つ、照明やエアコン、TVを自動制御</a></li>
+<li><a href="/atcl/column/16/060700122/062100031/">［優良賞］対話ができる癒やし系ロボット、ラズパイロボのラピロを利用</a></li>
+<li><a href="/atcl/column/15/112000265/060300042/">［Windows 10］「タブレットモード」はどう使う？</a></li>
+<li><a href="/atcl/column/15/112000265/060300040/">［Windows 10］アクションセンターの下部にあるボタンの役割は？</a></li>
+</ul>
+</div>
+</div>
+<div class="rankingBox">
+<h3>いま読まれている記事</h3>
+<ul>
+<li class="rank1">
+<a href="/atcl/watcher/14/334361/012800474/?r_win">
+<span class="top_title">【記者の眼】</span>
+Windows 10にアップグレードする前に知るべき6つの事柄</a>
+</li>
+<li class="rank2">
+<a href="/atcl/column/15/112000265/060300036/?r_win">
+<span class="top_title">【Q＆Aで分かるWindows 10】</span>
+［Windows 10］日付と時刻を修正したい</a>
+</li>
+<li class="rank3">
+<a href="/atcl/column/14/537490/082600019/?r_win">
+<span class="top_title">【Windows 8.1道場 ――XP/Vistaユーザー必見】</span>
+Windows 10にアップグレードする</a>
+</li>
+<li class="rank4">
+<a href="/atcl/column/15/112000265/060300037/?r_win">
+<span class="top_title">【Q＆Aで分かるWindows 10】</span>
+［Windows 10］海外の時刻も同時に表示したい</a>
+</li>
+<li class="rank5">
+<a href="/atcl/column/15/112000265/060300038/?r_win">
+<span class="top_title">【Q＆Aで分かるWindows 10】</span>
+［Windows 10］Windows 10の「アクションセンター」とは何？</a>
+</li>
+</ul>
+</div>
+
+<!-- DFP これからのIT投資術 マネジメント-->
+<div class="subPickupContents">
+<h3>これからのIT投資術<span>-PR-</span></h3>
+<div class="box">
+<div id="div-gpt-ad-_it_investment">
+<script type="text/javascript">
+googletag.display('div-gpt-ad-_it_investment');
+</script>
+</div></div>
+</div>
+<!-- DFP これからのIT投資術 マネジメント-->
+<!-- DFP ITpro Special　右ナビ用-->
+<div class="subPickupContents">
+<h3>ピックアップコンテンツ<span>-PR-</span></h3>
+<ul>
+<li><div id="div-gpt-ad-_pickup_contens_01"><script type="text/javascript">googletag.display('div-gpt-ad-_pickup_contens_01');</script></div></li>
+<li><div id="div-gpt-ad-_pickup_contens_02"><script type="text/javascript">googletag.display('div-gpt-ad-_pickup_contens_02');</script></div></li>
+<li><div id="div-gpt-ad-_pickup_contens_03"><script type="text/javascript">googletag.display('div-gpt-ad-_pickup_contens_03');</script></div></li>
+<li><div id="div-gpt-ad-_pickup_contens_04"><script type="text/javascript">googletag.display('div-gpt-ad-_pickup_contens_04');</script></div></li></ul>
+<p class="linkTo"><a target="_blank" href="http://special.nikkeibp.co.jp/as/itpsp/">&gt;&gt;もっと見る</a></p>
+</div>
+<!-- DFP ITpro Special　右ナビ用-->
+<div id="snsBox">
+<div id="snsBoxFacebook">
+<div class="fb-like-box" data-href="http://www.facebook.com/nikkeibpITpro" data-width="300" data-height="222" data-show-faces="true" data-stream="false" data-header="true" border_color="#3f70a3"></div>
+</div><!-- /#snsBoxFacebook -->
+</div><!-- /#snsBox -->
+<!-- Cxense content widget: 日経BPからのお知らせ -->
+<div id="cx_42417db374f673c965307cb3da383bbcbfada509" style="display:none"></div>
+<script type="text/javascript">
+    var cX = cX || {}; cX.callQueue = cX.callQueue || [];
+    cX.callQueue.push(['insertWidget', {
+        widgetId: '42417db374f673c965307cb3da383bbcbfada509',
+        insertBeforeElementId: 'cx_42417db374f673c965307cb3da383bbcbfada509',
+        width: 300, height: 506, renderTemplateUrl: 'auto'
+    }]);
+
+    // Async load of cx.js
+    (function(d,s,e,t){e=d.createElement(s);e.type='text/java'+s;e.async='async';
+    e.src='http'+('https:'===location.protocol?'s://s':'://')+'cdn.cxense.com/cx.js';
+    t=d.getElementsByTagName(s)[0];t.parentNode.insertBefore(e,t);})(document,'script');
+</script>
+<!-- End of Cxense content widget -->
+<div class="rankingBoxActive">
+<h3><a href="/active/" target="_blank">ITpro Active</a> 昨日読まれた記事</h3>
+<ul>
+<li class="rank1"><a href="/atclact/active/16/062400064/062800004/?i_cid=nbpitp_siad_try160301itprank&act12">マイナンバーの本当の怖さをご存じ？　「詐欺」より「名寄せ」　</a></li>
+<li class="rank2"><a href="/atclact/activesp/16b/042800002/?i_cid=nbpitp_siad_try160301itprank&act12">Windows 10へのアップグレード
+成功のための「最適ルート」を考える</a></li>
+<li class="rank3"><a href="/atclact/activesp/16b/060700011/?i_cid=nbpitp_siad_try160301itprank&act12">「Office 365」への移行、躊躇する企業があげる「理由」と解決策は</a></li>
+<li class="rank4"><a href="/atclact/active/16/062400064/062400001/?i_cid=nbpitp_siad_try160301itprank&act12">「都市伝説」に振り回されるな　マイナンバー、日常生活の落とし穴</a></li>
+<li class="rank5"><a href="/atclact/activewp/v/16/05/12/00019/?i_cid=nbpitp_siad_try160301itprank&act12">Windows 7の最新CPUサポート終了に備え、今のうちに検討すべきこと</a></li>
+</ul>
+</div>
+<div class="rectangle">
+<div id="div-gpt-ad-rectangle2">
+<script type="text/javascript">
+googletag.display('div-gpt-ad-rectangle2');
+</script>
+</div></div>
+</div>
+</div>
+
+<div id="sideNavi">
+<div class="btnBox">
+<p align="center"><a href="/NCD/"><img src="/images/n/itpro/2012/header_logo_ncd2014.gif" alt="日経コンピュータ Digital" border="0"></a></p>
+</div><!-- /.btnBox -->
+
+<div class="rssMagBox">
+<ul>
+<li class="rss"><a href="/rss/ITpro.rdf">RSS</a></li>
+<li class="mailmag"><a href="/article/MAG/20090910/336980/">メルマガ</a></li>
+</ul>
+</div><!-- /.rssMagBox -->
+
+<div></div>
+<div class="focus">
+<h3>Focus</h3>
+<ul>
+<li class="social">
+<a href="/fintech/">FinTech</a>
+</li>
+<li class="social">
+<a href="/social/">ソーシャル/CMO</a>
+</li>
+<li class="iot">
+<a href="/iot/">IoT</a>
+</li>
+<li class="bigdata">
+<a href="/bigdata/">ビッグデータ</a>
+</li>
+<li class="china">
+<a href="/management/china/">中国・アジア</a>
+</li>
+</ul>
+</div><!-- /.focus -->
+
+<div class="rectangleBox125">
+<div id="div-gpt-ad-side_square">
+<script type="text/javascript">
+googletag.display('div-gpt-ad-side_square');
+</script>
+</div></div><!-- /.rectangleBox125 -->
+<div class="category">
+<h3>記事カテゴリ</h3>
+<ul>
+<li class="feature"><a href="/tokushu/">特集</a></li>
+<li class="feature"><a href="/atcl/column/14/090100053/?TOC=1">ITpro Report</a></li>
+<li class="news"><a href="/news/">ニュース</a></li>
+<li class="feature"><a href="/article/COLUMN/20100409/346926/?TOC=1">News ＆ Trend</a></li>
+<li class="series"><a href="/series/">連載</a></li>
+<li class="interview"><a href="/interview/">インタビュー</a></li>
+<li class="case"><a href="/jirei/">事例</a></li>
+<li class="keyword"><a href="/keyword/">キーワード</a></li>
+<li class="keyword"><a href="/matome/">ITproまとめ</a></li>
+<li class="events"><a href="/events/">イベント</a></li>
+<li class="weekend"><a href="/weekend/">週末スペシャル</a></li>
+<li class="ciomagazine"><a href="/ciomagazine/">CIO</a></li>
+<li class="computerworld"><a href="/computerworld/">Computerworld</a></li>
+<li class="computerworld"><a href="/author/">執筆者一覧</a></li>
+<li class="allcontents"><a href="/allcontents/">ITpro全記事一覧</a></li>
+</ul>
+</div><!-- /.category -->
+
+<div class="btnBox">
+<p align="center"><a href="/ptn/"><img src="/images/n/itpro/2012/ptn_logo.png" alt="ITpro partners" border="0"></a></p>
+</div><!-- /.btnBox -->
+
+<div class="hotTopicsBox">
+<h3>イベントINFO -PR-</h3><ul>
+<li><div id="div-gpt-ad-event_information_01"><script type="text/javascript">googletag.display('div-gpt-ad-event_information_01');</script></div></li>
+<li><div id="div-gpt-ad-event_information_02"><script type="text/javascript">googletag.display('div-gpt-ad-event_information_02');</script></div></li>
+<li><div id="div-gpt-ad-event_information_03"><script type="text/javascript">googletag.display('div-gpt-ad-event_information_03');</script></div></li></ul></div><!-- /.hotTopicsBox -->
+<div id="leftMedia">
+<h3>最新号</h3>
+<ul>
+<li><a href="/NC/"><img src="/images/itpro/2012/sidenavi/nc/mokuji_s.jpg" width="110"></a></li>
+</ul>
+</div><!-- /#leftMedia -->
+
+<div class="event">
+<h3>特番/イベント</h3>
+<ul>
+<li><a href="/education/">教育とICT Online</a></li>
+<li><a href="/pcknowhow/">知らなきゃ損するイマドキのパソコン活用</a></li>
+<li><a href="/ev/itex/itj16/">IT Japan 2016</a></li>
+<li><a href="/expo/">ITpro EXPO 2015</a></li>
+<li><a href="/mynumber/">マイナンバー</a></li>
+<li><a href="/hakenhou/">派遣法改正</a></li>
+<li><a href="/siliconvalley/">シリコンバレー NEXT</a></li>
+<li><a href="/iotnext/">IoT Next</a></li>
+<li><a href="/devops/">DevOpsによる変革</a></li>
+<li><a href="/itarchi/">ITインフラ進化論</a></li>
+<li><a href="/neteng/">ネット技術者倶楽部</a></li>
+<li><a href="/android/developinn/">Android開発</a></li>
+</ul>
+</div><!-- /.event -->
+
+<div id="leftCampaign">
+<h3>
+
+注目のセミナー
+
+</h3>
+<p class="catch">
+
+申込受付中！
+
+</p>
+<p class="title"><a href="
+
+http://coin.nikkeibp.co.jp/coin/itpro-s/seminar/itpa/160909/
+
+" target="_blank">
+<FONT SIZE=-1">社内で一目おかれる　事例マーケター養成講座【9/9開催】</FONT><br>
+
+
+</a></p>
+<p class="lead">
+
+社内で一目おかれる事例マーケターになるための勘所（事例の選び方、作り方、伝え方）を伝授！
+
+
+</p>
+</div></div>
+</div>
+<div id="siteInformation">
+<ul>
+<li class="infomenu1"><a href="/sitemap/">サイトマップ</a></li>
+<li class="infomenu2"><a href="/article/MAG/20090910/336995/">ITproについて</a></li>
+<li class="infomenu3"><a href="http://account.nikkeibp.co.jp/service/25-sid0177.html">会員登録・変更</a></li>
+<!--<li class="infomenu4"><a href="/article/MAG/20090910/336987/">RSS</a></li>-->
+<li class="infomenu5"><a href="/article/MAG/20090910/336980/">メルマガ</a></li>
+<!--<li class="infomenu6"><a href="/article/MAG/20110201/356735/">ソーシャル</a></li>-->
+<li class="infomenu7"><a href="/article/MAG/20120412/390759/">ITpro Smart</a></li>
+<li class="infomenu8"><a href="/ask_pass/">お問い合わせ・ご意見</a></li>
+</ul>
+</div><!-- /#siteInformation --><div id="footer">
+<div class="logo_box">
+<ul>
+<li class="itpro"><a href="/">ITpro</a></li>
+<li class="active"><a href="/active/">ITpro Active</a></li>
+<li class="premium"><a href="/premium/">ITpro Premium</a></li>
+<li class="smart"><a href="/article/MAG/20120412/390759/">ITpro Smart</a></li>
+<li class="special"><a href="http://special.nikkeibp.co.jp/as/itpsp/">ITpro SPECIAL</a></li>
+</ul>
+</div><!-- /.logo_box --><div class="bottom_link">
+｜<a href="http://itpro.nikkeibp.co.jp/aboutitpro/">ITproについて</a>｜<a href="http://account.nikkeibp.co.jp/service/25-sid0177.html">会員登録・変更</a>｜<a href="http://itpro.nikkeibp.co.jp/article/MAG/20090910/336980/">メルマガ登録</a>｜<a href="/article/MAG/20090622/332387/">アクセス履歴の利用について</a>｜<a href="http://support.nikkei.com/category/show/684?site_domain=nikkeibp">ITproへのお問い合わせ・ご意見</a>｜<a href="http://special.nikkeibp.co.jp/mktg/itpro/index.html">広告について</a>｜<a href="http://itpro.nikkeibp.co.jp/sitemap/">サイトマップ</a>｜<a href="http://store.nikkeibp.co.jp/">日経BP書店</a>｜<br>
+｜<a href="http://corporate.nikkeibp.co.jp/information/copyright/">著作権・リンク</a>について｜<a href="http://corporate.nikkeibp.co.jp/information/privacy/">個人情報保護方針/ネットにおける情報収集/個人情報の共同利用について</a>｜<a target="_blank" href="http://account.nikkeibp.co.jp/tos/50-svn0019.html">利用規約</a>｜<a target="_blank" href="http://itpro.nikkeibp.co.jp/article/MAG/20120412/390759/">スマートフォン版について</a>｜<a target="_blank" href="http://www.nikkeibp.co.jp/n-id/">ID統合について</a>｜
+</div><!-- /.bottom_link -->
+<div id="copy_box">
+<p class="logo"><a href="http://corporate.nikkeibp.co.jp/" target="_blank"><img src="/images/itpro/2012/bp_logo.gif" alt="日経BP社" width="120" height="21"></a></p>
+<p class="copyright">Copyright &copy; 1995-2016 Nikkei Business Publications, Inc. All rights reserved.<br>このページに掲載されている記事・写真・図表などの無断転載を禁じます。著作権は日経BP社、またはその情報提供者に帰属します。<br>掲載している情報は、記事執筆時点のものです。</p>
+</div><!--/#copy_box-->
+</div><!--/#footer-->
+
+
+<div id="spcheckButton"></div><!--googleon: index-->
+</div>
+<!-- User Insight PCDF Code Start : nikkeibp.co.jp -->
+<script type="text/javascript">
+<!--
+var _uic = _uic ||{}; var _uih = _uih ||{};_uih['id'] = 52009;
+_uih['lg_id'] = '';
+_uih['fb_id'] = '';
+_uih['tw_id'] = '';
+_uih['uigr_1'] = ''; _uih['uigr_2'] = ''; _uih['uigr_3'] = ''; _uih['uigr_4'] = ''; _uih['uigr_5'] = '';
+_uih['uigr_6'] = ''; _uih['uigr_7'] = ''; _uih['uigr_8'] = ''; _uih['uigr_9'] = ''; _uih['uigr_10'] = '';
+
+/* DO NOT ALTER BELOW THIS LINE */
+/* WITH FIRST PARTY COOKIE */
+(function() {
+var bi = document.createElement('scri'+'pt');bi.type = 'text/javascript'; bi.async = true;
+bi.src = ('https:' == document.location.protocol ? 'https://bs' : 'http://c') + '.nakanohito.jp/b3/bi.js';
+var s = document.getElementsByTagName('scri'+'pt')[0];s.parentNode.insertBefore(bi, s);
+})();
+//-->
+</script>
+<!-- User Insight PCDF Code End : nikkeibp.co.jp -->
+
+</body>
+</html>
+

@@ -201,6 +201,25 @@ describe('Regression Tests', function() {
       'Official: ジャガー、再生産する「XKSS」',
       '【最強！週末映画ガイド】破壊王エメリッヒ'
     ],
+  },
+  {
+    fixture: 'itpro-test',
+    title: '［Windows 10］ウィンドウを閉じずに一時的にデスクトップを見たい',
+    include: [
+      'デスクトップにショートカットアイコンやフォルダーを置いて作業している',
+      '●ショートカットキーで素早くデスクトップ',
+      'するとアプリのウィンドウが全てタスクバーに最小化し'
+    ],
+    notInclude: [
+      '情報戦略/業務革新',
+      'Windows 10 Anniversary Updateで何が変わったのか',
+      '失敗しない研修の選び方',
+      '「タブレットモード」はどう使う？ ',
+      'ワークスタイル変革に関する調査',
+      'IT業界の多重下請け構造の瓦解、技術者に“失業”の覚悟はあるか',
+      'マイナンバーの本当の怖さをご存じ？',
+      '社内で一目おかれる'
+    ],
   }];
   var isOnly = function(testCase) {return testCase.only};
   var noSkip = function(testCase) {return !testCase.skip};
