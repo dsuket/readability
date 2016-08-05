@@ -13,7 +13,8 @@ var regexps = {
   normalizeRe: /\s{2,}/g,
   killBreaksRe: /(<br\s*\/?>(\s|&nbsp;?)*){1,}/g,
   videoRe: /http:\/\/(www\.)?(youtube|vimeo|youku|tudou|56|yinyuetai)\.com/i,
-  attributeRe: /blog|post|article/i
+  attributeRe: /blog|post|article/i,
+  negativeContentRe: /【関連記事】|・関連記事/
 };
 
 var dbg;
@@ -589,7 +590,13 @@ function prepArticle(articleContent) {
     var embedCount = articleParagraphs[i].getElementsByTagName('embed').length;
     var objectCount = articleParagraphs[i].getElementsByTagName('object').length;
 
-    if (imgCount == 0 && embedCount == 0 && objectCount == 0 && getInnerText(articleParagraphs[i], false) == '') {
+    /* remove special text */
+    var innerText = getInnerText(articleParagraphs[i], false);
+    if (innerText.search(regexps.negativeContentRe) !== -1) {
+      innerText = '';
+    };
+
+    if (imgCount == 0 && embedCount == 0 && objectCount == 0 && innerText == '') {
       articleParagraphs[i].parentNode.removeChild(articleParagraphs[i]);
     }
   }

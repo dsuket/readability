@@ -129,7 +129,7 @@ describe('Regression Tests', function() {
       '「ポケモンGO」の伝説のポケモンやiOS版のバッテリー節約モード',
       'パーソナルコンピューターの父アラン・ケイが人工知能・Apple・IT企業について語る',
       'ドーピングすると起こる体の変化と副作用',
-      // 'GoProがVR用小型360度カメラを開発中、ライブ配信も可能で2017年にも市場に登場か',  // TODO: remove related entry
+      'GoProがVR用小型360度カメラを開発中、ライブ配信も可能で2017年にも市場に登場か',
       'GIGAZINEについて'
     ],
   },
@@ -146,7 +146,7 @@ describe('Regression Tests', function() {
     ],
     notInclude: [
       '会員情報ログイン',
-      // 'ポケモントレーナーの朝は早い', // TODO: remove related entry
+      'ポケモントレーナーの朝は早い',
       '関連リンク',
       'イベンターのための夏のフェス',
       '女子大生はInstagramがお好き',
