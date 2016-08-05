@@ -71,9 +71,7 @@ describe('Regression Tests', function() {
   },
   {
     fixture: 'itmedia_news118',
-    title: 'SIMアダプターやピンを収納',
-    // TODO: expected title
-    // title: 'SIMアダプターやピンを収納——MOBOの「Card Strage」、8月中旬発売',
+    title: 'SIMアダプターやピンを収納——MOBOの「Card Strage」、8月中旬発売',
     include: [
       'アーキサイトは、8月中旬に提案型',
       '本製品にはmicro SIMを標準SIM',
